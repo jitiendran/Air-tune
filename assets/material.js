@@ -5,8 +5,8 @@ function closenav(){
     document.getElementById("nav").style.display = "none";
 }
 function login(){
-    window.location.href = "login.html";
+    window.location.href = "login.php";
 }
 function register(){
-    window.location.href = "register.html";
+    window.location.href = "register.php";
 }

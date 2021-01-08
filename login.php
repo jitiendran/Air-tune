@@ -1,3 +1,4 @@
+<?php include('assets/server.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -254,14 +255,17 @@
                     </defs>
                     </svg>                                    
             </div>
-            <div class="login-container">
-                <h1 class="login-container-title">Sign in</h1>
-                <input type="text" placeholder="Name">
-                <input type="password" placeholder="Password">
-                <button class="register-btn">Log in</button>
-                <hr>
-                <p>Don't have an account? <a href="register.html">Sign up</a></p>
-            </div>
+            <form action="login.php" method="post">
+                <?php include('assets/errors.php'); ?>
+                <div class="login-container">
+                    <h1 class="login-container-title">Sign in</h1>
+                    <input type="text" placeholder="Name" name="name">
+                    <input type="password" placeholder="Password" name="password">
+                    <button class="register-btn" name="login_user" >Log in</button>
+                    <hr>
+                    <p>Don't have an account? <a href="register.php">Sign up</a></p>
+                </div>
+            </form>
         </div>
     </div>
 </body>

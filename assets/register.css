@@ -93,9 +93,12 @@ body{
 
     }
 }
+form{
+    width: 60%;
+}
 .login-container{
-    width: 35%;
-    height: 30em;
+    width: 60%;
+    height: 35em;
     display: flex;
     flex-direction: column;
     margin-top: 6em;
@@ -154,15 +157,20 @@ body{
     .animation-container{
         display: none;
     }
+    form{
+        margin-top: -2em;
+        margin-left: 0em;
+        width: 95%;
+    }
     .login-container{
-        margin-left: 1.2em;
-        width: 90%;
+        margin-left: 1.45em;
+        width: 92%;
     }
     .login-container input[type=text],
     .login-container input[type=password]{
-        width: 90%;
+        width: 92%;
     }
     .register-btn{
-        width: 90%;
+        width: 92%;
     }
 }
