@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    min-height: 90vh;
+    background: #fcd301;
+    font-family: 'Montserrat', sans-serif;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100%;
+}
+.animation-container{
+    display: flex;
+    width: 50%;
+    margin-left: 1em;
+    /* height: 70em; */
+}
+.animation-container svg{
+    width: 100%;
+    height: 40em;
+    margin-top: 0em;
+}
+.animation-container rect{
+    width: 100%;
+    height: 50em;
+}
+#Ballons{
+    animation: Ballons 2s infinite alternate;
+}
+#balloon-1{
+    animation: balloon-1 2s infinite alternate;
+}
+#balloon-2{
+    animation: balloon-2 2s infinite alternate;
+}
+#balloon-3{
+    animation: balloon-2 2s infinite alternate;
+}
+#balloon-4{
+    animation: balloon-4 1.8s infinite alternate;
+}
+#pad-1{
+    animation: pad-1 2s infinite alternate;
+}
+#pad-2{
+    animation: pad-2 2s infinite alternate;
+}
+@keyframes balloon-1{
+    from{
+        transform: rotateY(0deg);
+    }
+    to{
+        transform: rotateY(13deg);
+    }
+}
+@keyframes balloon-2{
+    from{
+        transform: rotateY(0deg);
+    }
+    to{
+        transform: rotateY(15deg);
+    }
+}
+@keyframes balloon-4{
+    from{
+        transform: rotateY(0deg);
+    }
+    to{
+        transform: rotateY(14deg);
+    }
+}
+@keyframes pad-1{
+    from{
+        transform: rotateY(0deg);
+    }
+    to{
+        transform: rotateY(15deg);
+    }
+}
+@keyframes pad-2{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(2deg);
+
+    }
+}
+.login-container{
+    width: 35%;
+    height: 30em;
+    display: flex;
+    flex-direction: column;
+    margin-top: 6em;
+    margin-left: 3em;
+    border-radius: .5em;
+    background-color: #fff;
+    align-items: center;
+    padding: 1em;
+    border-radius: 0.5em;
+}
+.login-container-title{
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-decoration-color: rgba(51, 48, 48, 0.452);
+}
+.login-container input[type=text],
+.login-container input[type=password]{
+    border: 2px solid gainsboro;
+    font-size: 1.5em;
+    height: 1.6em;
+    border-radius: .2em;
+    margin-top: 1em;
+    width: 65%;
+    outline: none;
+}
+.login-container input[type=text]:focus,
+.login-container input[type=password]:focus{
+    border: 2.4px solid rgba(37, 36, 36, 0.452);
+}
+.register-btn{
+    margin-top: 1em;
+    width: 65%;
+    border-radius: .2em;
+    border: none;
+    color: rgba(3, 3, 3, 0.815);
+    font-size: 1.5em;
+    background-color: #fcd301;
+    height: 1.6em;
+    outline: none;
+    cursor: pointer;
+    margin-bottom: 1em;
+}
+.login-container hr{
+    border: .1px solid rgba(37, 36, 36, 0.452);
+    width: 70%;
+    margin-bottom: .8em;
+}
+.login-container p{
+    font-size: 1.2em;
+    font-weight: 400;
+}
+@media (max-width : 400px){
+    .container{
+        width: 100%;
+    }
+    .animation-container{
+        display: none;
+    }
+    .login-container{
+        margin-left: 1.2em;
+        width: 90%;
+    }
+    .login-container input[type=text],
+    .login-container input[type=password]{
+        width: 90%;
+    }
+    .register-btn{
+        width: 90%;
+    }
+}
