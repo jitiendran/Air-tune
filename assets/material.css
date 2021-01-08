@@ -248,7 +248,7 @@ main{
     }
     .drop-down{
         display: block;
-        margin-left: -25em;
+        margin-left: -22em;
         width: 3em;
         height: 3em;
         background-color: transparent;
@@ -268,7 +268,7 @@ main{
         outline: none;
         border: none;
         margin-top: .3em;
-        margin-left: 6.75em;
+        margin-left: 6em;
         width: 2em;
     }
     .wind{
