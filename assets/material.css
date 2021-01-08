@@ -62,13 +62,15 @@ main{
         transform: rotateX(36deg);
     }
 }
+.nav-bar{
+    width: 100%;
+}
 .navbar-container{
-    margin-top: 1.5em;
+    margin-top: 2em;
     display: flex;
     flex-direction: row;
     margin-bottom: 3em;
     justify-content: space-around;
-    align-self: stretch;
 }
 .navbar-container a{
     text-decoration: none;
