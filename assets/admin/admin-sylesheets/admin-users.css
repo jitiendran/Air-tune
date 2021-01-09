@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    background: #fcd301;
+}
+.main{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.slidebar-container{
+    width: 20%;
+    padding: 1em;
+    min-height: 100vh;
+    background-color: #fff;
+    text-align: center;
+}
+.slidebar-container h1{
+    color: #fcd301;
+}
+.slidebar-container hr{
+    margin-top: .2em;
+    border: .1px solid gainsboro;
+}
+.slidebar-content{
+    padding: 1em;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+.slidebar-content a{
+    width: 100%;
+    text-align: left;
+    text-decoration: none;
+    outline: none;
+    font-size: 1.4em;
+    font-weight: 600;
+    color: #244079;
+}
+.slidebar-content a:hover{
+    color: #fcd301;
+}
+.submain{
+    width: 80%;
+}
+.bars{
+    background-color: #fcd301;
+    border: none;
+    outline: none;
+    display: none;
+    font-size: 2.2em;
+    margin-left: .2em;
+    margin-right: 1em;
+}
+.admin-navbar-container{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1.2em;
+    align-items: center;
+}
+.fa-user-circle{
+    font-size: 1.6em;
+    /* font-size: 2em; */
+    color: #fff;
+}
+.admin-title{
+    width: 50%;
+    display: flex;
+    font-display: row;
+    align-items: center;
+    /* justify-content: space-evenly; */
+}
+.admin-title svg{
+    width: 3.5em;
+    height: 3.5em;
+}
+.admin-title h1{
+    margin-left: .3em;
+    font-size: 3em;
+    color: #fff;
+    font-family: 'Nanum Pen Script', cursive;
+}
+.admin-navbar-container a{
+    text-decoration: none;
+    outline: none;
+    font-size: 1.8em;
+    font-family: sans-serif;
+    color: #fff;
+}
+.admin-navbar-container span{
+    color: #14274e;
+    font-weight: 600;
+}
+#tunes{
+    animation: tunes 2s infinite alternate;
+}
+@keyframes tunes{
+    from{
+        transform: rotateX(0deg);
+    }
+    to{
+        transform: rotateX(36deg);
+    }
+}
+.user-table{
+    width: 93%;
+    background-color: #fff;
+    margin-top: 4em;
+    margin-left: 3em;
+    padding: 1em;
+    border-radius: .3em;
+}
+.user-table table{
+    width: 100%;
+    height: 80%;
+}
+.user-table tbody{
+    width: 100%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.user-table tr{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    width: 100%;
+}
+.user-table th{
+    font-size: 1.3em;
+    color: #f72585;
+}
+.header{
+    display: flex;
+    align-items: center;
+    text-align: left;
+    /* justify-content: space-between; */
+    padding: .8em;
+    border-bottom: 2px solid gainsboro;   
+}
+.user-table td{
+    padding: .3em;
+    font-weight: 600;
+    margin-top: .5em;
+}
+.h1{
+    width: 10%;
+}
+.h2{
+    width: 20%;
+}
+.h3{
+    width: 20%;
+}
+.h4{
+    width: 26.5%;
+}
+.col-1{
+    width: 10%;
+    margin-left: .3em;
+}
+.col-2{
+    width: 20%;
+}
+.col-3{
+    width: 19.5%;
+}
+.col-4{
+    width: 25%;
+}

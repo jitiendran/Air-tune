@@ -42,15 +42,17 @@
 		if (empty($password)) {
 			array_push($errors, "Password is required");
 		}
-
-		if (count($errors) == 0) {
+		if($username == "admin" && $password == "Jitiendran@2000"){
+			header('location: assets/admin/admin.php');
+		}
+		else if (count($errors) == 0) {
 			// $password = md5($password);
 			$query = "SELECT * FROM users WHERE names ='$username' AND passwords='$password'";
 			$results = mysqli_query($db, $query);
 			if (mysqli_num_rows($results) == 1) {
 				$_SESSION['username'] = $username;
 				$_SESSION['success'] = "You are now logged in";
-				header('location: assets/user.html');
+				header('location: assets/users/user.html');
 			}else {
 				array_push($errors, "Wrong username/password combination");
 			}
