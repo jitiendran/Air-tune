@@ -23,7 +23,9 @@
                 <a href="admin.php">Dashboard</a>
                 <a href="admin-users.php">Users</a>
                 <a href="admin-albums.php">Albums</a>
-                <a href="#">Songs</a>
+                <a href="admin-list.php">List</a>
+                <a href="admin-tamil.php">Tamil</a>
+                <a href="admin-english.php">English</a>
             </div>
         </div>
         <div class="submain">

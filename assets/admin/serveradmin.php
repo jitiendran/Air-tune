@@ -13,7 +13,7 @@
                 $query = "CREATE TABLE $name(
                     sid INT(100) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
                     sname varchar(255) NOT NULL,
-                    song mediumblob NOT NULL,
+                    song varchar(255) NOT NULL,
                     composer varchar(255) NOT NULL
                 )";
                 mysqli_query($db,$query);
@@ -29,7 +29,7 @@
                 $query = "CREATE TABLE $name(
                     sid INT(100) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
                     sname varchar(255) NOT NULL,
-                    song mediumblob NOT NULL,
+                    song varchar(255) NOT NULL,
                     composer varchar(255) NOT NULL
                 )";
                 mysqli_query($db,$query);
