@@ -1,58 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body{
     font-family: 'Montserrat', sans-serif;
-    background: #fcd301;
+    background-image: url(user-images/user-bg.jpg);
+    background-size: cover;
+    background-position:50% 50%;
 }
 .main{
     width: 100%;
     display: flex;
     flex-direction: row;
 }
-.slidebar-container{
-    width: 20%;
-    padding: 1em;
-    min-height: 100vh;
-    background-color: #fff;
-    text-align: center;
-}
-.slidebar-container h1{
-    color: #fcd301;
-}
-.slidebar-container hr{
-    margin-top: .2em;
-    border: .1px solid gainsboro;
-}
-.slidebar-content{
-    padding: 1em;
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-evenly;
-}
-.slidebar-content a{
-    width: 100%;
-    text-align: left;
-    text-decoration: none;
-    outline: none;
-    font-size: 1.4em;
-    font-weight: 600;
-    color: #244079;
-}
-.slidebar-content a:hover{
-    color: #fcd301;
-}
 .submain{
-    width: 80%;
+    width: 100%;
 }
 .bars{
-    background-color: #fcd301;
+    /* background-color: #fcd301; */
     border: none;
     outline: none;
     display: none;
@@ -98,9 +69,10 @@ body{
     color: #fff;
 }
 .admin-navbar-container span{
-    color: #14274e;
-    font-weight: 600;
-    font-size: 1em;
+    font-family: 'Sansita Swashed', cursive;
+    color: rgb(53, 53, 53);
+    font-weight: 400;
+    font-size: 1.23em;
 }
 #tunes{
     animation: tunes 2s infinite alternate;
@@ -113,14 +85,39 @@ body{
         transform: rotateX(36deg);
     }
 }
+main{
+    background: rgba( 255, 255, 255, 0.20 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 1.0px );
+    -webkit-backdrop-filter: blur( 1.0px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    width: 95%;
+    margin-left: 2em;
+    padding: 1em;
+}
+.navbar-wrapper{
+    padding: 1.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.navbar-wrapper a{
+    color: azure;
+    text-decoration: none;
+    outline: none;
+    font-size: 1.5em;
+    font-weight: 600;
+}
 .tamil-container{
     width: 100%;
     display: flex;
     flex-direction: column;
     padding: 1em;
 }
-.tamil-container{
-    color: #244079;
+.tamil-container h1{
+    font-family: 'Sansita Swashed', cursive;
+    color: #4D535E;
 }
 .album-container{
     display: flex;
@@ -135,7 +132,7 @@ body{
     flex-direction: row;
 }
 .album-container button{
-    background-color: #fcd301;
+    background-color: transparent;
     border: none;
     outline: none;
     font-size: 2em;
@@ -163,11 +160,63 @@ body{
     margin-bottom: .7em;
 }
 .album-content h1,h2,h3{
+    font-family: 'Montserrat', sans-serif;
     color: #000;
     margin-bottom: .7em;
     font-size: 1em;
 }
 .album-content span{
     font-size: .85em;
-    color: #f72585;
+    color: #F90165;
+}
+.song-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    padding: .5em;
+    margin-left: 8em;
+    margin-bottom: 1em;
+    background: rgba( 255, 255, 255, 0.55 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 3.0px );
+    -webkit-backdrop-filter: blur( 3.0px );
+    border-radius: 7px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.song-content{
+    display: flex;
+    flex-direction: row;
+}
+#id{
+    width: 1em;
+}
+#play{
+    margin-right: 3em;
+}
+.buttons{
+    width: 4em;
+}
+.buttons #play{
+    display: block;
+}
+.buttons #pause{
+    display: none;
+}
+.buttons1 #play{
+    display: none;
+}
+.buttons1 #pause{
+    display: block;
+}
+.song-wrapper p{
+    font-size: 1.3em;
+    margin-right: 1em;
+}
+.song-wrapper button{
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1.8em;
+    cursor: pointer;
 }

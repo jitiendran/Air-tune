@@ -11,21 +11,10 @@ $_SESSION['success'] = "";
     <title>Air tunes</title>
     <link rel="stylesheet" href="user.css">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
-<body>
+<body onload="admin()">
 <div class="main">
     <script src="user.js"></script>
-        <div class="slidebar-container">
-            <h1><?php echo $_SESSION['username'];?></h1>
-            <hr>
-            <div class="slidebar-content">
-                <a href="user.php">Dashboard</a>
-                <a href="favourites.php">Favourites</a>
-                <a href="tamil.php">Tamil</a>
-                <a href="english.php">English</a>
-            </div>
-        </div>
         <div class="submain">
             <div class="admin-navbar-container">
                 <div class="admin-title">
@@ -59,10 +48,15 @@ $_SESSION['success'] = "";
                     </svg>
                     <h1>Air tunes</h1>
                 </div>            
-                <a href="#"><i class="fas fa-user-circle"></i> <span><?php echo $_SESSION['username'];?> </span> <i class="fas fa-chevron-down"></i></a>
+                <a href="#"><i class="fas fa-user-circle"></i> <span>@<?php echo $_SESSION['username'];?> </span> <i class="fas fa-chevron-down"></i></a>
             </div>
             <main>
-                
+                <div class="navbar-wrapper">
+                    <a href="user.php" id="dash">Dashboard</a>
+                    <a href="#">Favourites</a>
+                    <a href="tamil.php">Tamil</a>
+                    <a href="#">English</a>
+                </div>             
                 <div class="tamil-container">
                     <h1>Tamil Albums</h1>
                     <div class="album-container">

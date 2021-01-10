@@ -1,3 +1,21 @@
+function admin(){
+    let dashboard = document.getElementById('dash').style;
+    dashboard.paddingBottom = ".3em";
+    dashboard.borderBottomStyle = "solid";
+    dashboard.borderBottomWidth = ".1em";
+    dashboard.color = "yellow";
+    dashboard.textDecorationColor = "yellow";
+    console.log("In dashboard");
+}
+function tamil_dash(){
+    let dashboard = document.getElementById('dash').style;
+    dashboard.paddingBottom = ".3em";
+    dashboard.borderBottomStyle = "solid";
+    dashboard.borderBottomWidth = ".1em";
+    dashboard.color = "yellow";
+    dashboard.textDecorationColor = "yellow";
+    console.log("In dashboard");
+}
 function home(){
     window.location.href = "user.php";
 }
@@ -41,4 +59,22 @@ function prev1(){
         document.getElementById(div[b]).style.display = "none";
         j--;
     }
+}
+let k = 1,l = 1;
+function play_audio(){
+    var aid = "song_toplay"+l;
+    console.log("hello" +aid);
+    document.getElementById('buttons').classList.toggle('buttons1');
+    if(k % 2 != 0){
+        document.getElementById(aid).play();
+    }
+    else{
+        document.getElementById(aid).pause();
+    }
+    document.getElementById(aid).onended = function(){
+        alert("Song is Ended");
+        l++;
+        play_audio();
+    }
+    k++;
 }
