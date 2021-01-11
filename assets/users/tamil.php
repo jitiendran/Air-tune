@@ -1,7 +1,9 @@
 <?php
-include('audio.php');
-session_start();
-$_SESSION['success'] = "";
+    include('audio.php');
+    include('songname.php');
+    session_start();
+    $_SESSION['success'] = "";
+    $id = 0;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -76,20 +78,31 @@ $_SESSION['success'] = "";
 
                         </div>
                         <div class="player-contents-col">
-                            <h2>Song Name</h2>
-                            <h2>Artist</h2>
-                            <h2>Composer</h2>
+                            <h2>Song Name <span><?php sname($id);?></span></h2>
+                            <h2>Artist <span></span></h2>
+                            <h2>Composer <span></span></h2>
                         </div>
                     </div>
+                    <script>
+                        var names;
+                        function name(){
+                            names += "<?php sname($id);?>";
+                        }
+                        for(let i = 0 ; i < 64 ; i++){
+                            <?php $id+=1; ?>
+                            name();
+                        }
+                        console.log(names);
+                    </script>
                 <?php $m = 0; ?>
                     <div class="audio-controls">
-                        <button onclick = 'prev()'><i class="fas fa-step-backward"></i></button>
+                        <button onclick = 'prev()'><?php $id--; ?><i class="fas fa-step-backward"></i></button>
                         <audio src="<?php audio();?>" id="audio"></audio>
                         <div id='buttons' class='buttons'>
                             <button id='play' onclick='play_audio()' ><i class='far fa-play-circle'></i></button>
                             <button id='pause' onclick='play_audio()' ><i class='far fa-pause-circle'></i></button>
                         </div>
-                        <button onclick='next()'><i class="fas fa-step-forward"></i></button>
+                        <button onclick='next()'><?php $id++; ?><i class="fas fa-step-forward"></i></button>
                     </div>
                 </div>
                 <?php
@@ -103,7 +116,7 @@ $_SESSION['success'] = "";
                         $name = $row['sname'];
                         $comp = $row['composer'];
                         $s = $row['song'];
-                        $song = 'songs/'.$s;
+                        $song = 'songs/rahman/'.$s;
                         array_push($audio_songs,$song);
                         // echo $song;
                         echo "<div class='song-wrapper'>";

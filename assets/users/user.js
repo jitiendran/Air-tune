@@ -90,6 +90,4 @@ function prev(){
     var id = "song_toplay"+(l+1);
     document.getElementById(id).pause();
     play_audio();
- }
-var song_name = ['Boomi Boommi','Hayati Hayati','Madura Marikozhundae'];
-var comp= 'Ar Rahman'; 
+}

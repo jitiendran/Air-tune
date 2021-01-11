@@ -119,18 +119,7 @@ $_SESSION['success'] = "";
                         }
 
                     ?>
-                    <?php
-                        $db = mysqli_connect('localhost','root','','tamil');
-                        $query2 = mysqli_query($db,"SELECT song FROM rahman");
-                        $count = mysqli_num_rows($query2);
-                        for($i = 1 ; $i <= $count ;$i++){
-                            $query3 = mysqli_query($db,"SELECT * FROM rahman WHERE sid = $i");
-                            $row = mysqli_fetch_assoc($query3);
-                            $s = $row['song'];
-                            $song = 'songs/'.$s;
-                            echo "<a href = '$song'>Click here</a><br>";
-                        }
-                    ?>
+                    
                     
                     <!-- <a href="<?php echo $row['song']; ?>">Click here</a>   
             </main>
