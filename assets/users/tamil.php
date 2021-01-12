@@ -12,12 +12,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="user-images/web-icon1.svg" type="image/x-icon">
     <title>Air tunes</title>
-    <link rel="stylesheet" href="user.css">
+    <link rel="stylesheet" href="user.css?<?php echo time();?>">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
 </head>
 <body onload="tamil_dash()">
 <div class="main">
-    <script src="user.js"></script>
+    <script src="user.js?<?php echo time();?>"></script>
         <div class="submain">
             <div class="admin-navbar-container">
                 <div class="admin-title">

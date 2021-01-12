@@ -16,6 +16,9 @@ function tamil_dash(){
     dashboard.textDecorationColor = "yellow";
     console.log("In dashboard");
 }
+function gotamil(){
+    window.location.href = "tamil.php";
+}
 function home(){
     window.location.href = "user.php";
 }
@@ -30,7 +33,7 @@ function slide(){
         i++;
     } 
 }
-function prev(){
+function before(){
     console.log("The i now is : "+i);
     var a = i-1;
     var b = a+3;
@@ -64,6 +67,7 @@ let k = 1,l = 1;
 function play_audio(){
     var aid = "song_toplay"+l;
     console.log("hello" +aid);
+    document.getElementById(aid).currentTime = 0;
     document.getElementById('buttons').classList.toggle('buttons1');
     if(k % 2 != 0){
         document.getElementById(aid).play();

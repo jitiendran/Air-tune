@@ -131,6 +131,9 @@ main{
     display: flex;
     flex-direction: row;
 }
+.glider-contain-multiple{
+    display: none;
+}
 .album-container button{
     background-color: transparent;
     border: none;
@@ -279,18 +282,93 @@ path{
     cursor: pointer;
 }
 /* Responsive design */
-@media (max-width: 400px){
+
+@media screen and (max-width: 400px){
     body{
         width: 100%;
     }
     .admin-title{
-        width: 49%;
+        width: 55%;
+        margin-right: .5em;
     }
     .admin-title svg{
-        width: 4em;
-        height: 4em;
+        width: 3.2em;
+        height: 3.2em;
     }
     .admin-title h1{
+        font-size: 2em;
+    }
+    .admin-navbar-container{
+        padding: .7em;
+    }
+    .admin-navbar-container a{
+        /* margin-left: .4em; */
+        width: 45%;
+        font-size: 1.1em;
+    }
+    .admin-navbar-container span{
+        font-size: 1em;
+    }
+    main{
+        margin-left: .55em;
+    }
+    .navbar-wrapper {
+        padding: .7em;
+        width: 105%;
+    }
+    .navbar-wrapper a{
+        font-size: 1em;
+    }
+    .tamil-container{
+        display: none;
+    }
+    .glider-contain-multiple{
+        display: block;
+        margin-top: 1em;
+    }
+    .glider-contain-multiple h1{
+        font-family: 'Sansita Swashed', cursive;
+        color: #4D535E;
         font-size: 1.3em;
+    }
+    .album-wrapper{
+        margin-top: .3em;
+        background: rgba( 255, 255, 255, 0.80 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 4.0px );
+        -webkit-backdrop-filter: blur( 4.0px );
+        border-radius: 5px;
+        margin-right: .3em;
+        padding: .4em;
+    }
+    .album-wrapper img{
+        width: 100%;
+        height: 6em;
+        border-radius: .3em;
+    }
+    .album-wrapper h1{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1em;
+    }
+    .player-container{
+        margin-left: 0em;
+        width: 20.3em;
+    }
+    .player-content-image svg{
+        width: 6em;
+    }
+    .player-contents-col{
+        margin-left: 3em;
+        font-size: 1em;
+    }
+    .audio-controls{
+        margin-left: 4em;
+    }
+    .fa-step-forward{
+        margin-left: 1em;
+    }
+    .fa-step-backward{
+        margin-left: -1em;
+        margin-right: 1em;
     }
 }

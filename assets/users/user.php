@@ -9,12 +9,13 @@ $_SESSION['success'] = "";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="user-images/web-icon1.svg" type="image/x-icon">
     <title>Air tunes</title>
-    <link rel="stylesheet" href="user.css">
+    <link rel="stylesheet" href="user.css?<?php echo time(); ?>">
+    <link rel="stylesheet" href="glider.min.css?<?php echo time();?>">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
 </head>
 <body onload="admin()">
 <div class="main">
-    <script src="user.js"></script>
+    <script src="user.js?<?php echo time(); ?>"></script>
         <div class="submain">
             <div class="admin-navbar-container">
                 <div class="admin-title">
@@ -56,11 +57,103 @@ $_SESSION['success'] = "";
                     <a href="#">Favourites</a>
                     <a href="tamil.php">Tamil</a>
                     <a href="#">English</a>
-                </div>             
+                </div> 
+                <div class="glider-contain-multiple">
+                    <h1>Tamil Albums</h1>
+                    <div class="glider">
+                        <div class="album-wrapper" onclick="gotamil()">
+                            <img src="user-images/rahman.jpg" alt="">
+                            <h1>Ar Rahman Top hits</h1>
+                        </div>
+                        <div class="album-wrapper">
+                            <img src="user-images/aadhi.jpg" alt="">
+                            <h1>HipHop Tamizha Top 10 hits</h1>
+                        </div>
+                        <div class="album-wrapper">
+                            <img src="user-images/anirudh.jpg" alt="">
+                            <h1>Top 10 Anirudh hits</h1>
+                        </div>
+                        <div class="album-wrapper">
+                            <img src="user-images/yuvan.jpg" alt="">
+                            <h1>Top 10 Yuvan hits</h1>
+                        </div>
+                        <div class="album-wrapper">
+                            <img src="user-images/harris.jpg" alt="">
+                            <h1>Harris Jeyaraj Top 10 hits</h1>
+                        </div>
+                        <div class="album-wrapper">
+                            <img src="user-images/ilayaraja.jpg" alt="">
+                            <h1>Top Ilayaraja melodies</h1>
+                        </div>
+                    </div><br>
+                    <h1>English Albums</h1>
+                    <div class="glider1">
+                        <div class="album-wrapper">
+                            <img src="user-images/imagine.jpg" alt="">
+                            <h1>Imagine dragons</h1>
+                        </div>
+                        <div class="album-wrapper">
+                            <img src="user-images/queen.jpg" alt="">
+                            <h1>Queen Top hits</h1>
+                        </div>
+                        <div class="album-wrapper">
+                            <img src="user-images/justin.jpg" alt="">
+                            <h1>Justin Bieber</h1>
+                        </div>
+                        <div class="album-wrapper">
+                            <img src="user-images/alan.jpg" alt="">
+                            <h1>Alan Walker</h1>
+                        </div>
+                        <div class="album-wrapper">
+                            <img src="user-images/5h.jpg" alt="">
+                            <h1>Fifth Harmony</h1>
+                        </div>
+                        <div class="album-wrapper">
+                            <img src="user-images/marshmellow.jpg" alt="">
+                            <h1>Marshmellow</h1>
+                        </div>
+                        <div class="album-wrapper">
+                            <img src="user-images/ariana.jpg" alt="">
+                            <h1>Ariana Grande</h1>
+                        </div>
+                    </div><br>
+                    <h1>Hindi Movie Albums</h1>
+                    <div class="glider2">
+                        <div class="album-wrapper">
+                            <img src="user-images/aashiqui.jpg" alt="">
+                            <h1>Aashiqui2</h1>
+                        </div>
+                        <div class="album-wrapper">
+                            <img src="user-images/kabir.jpg" alt="">
+                            <h1>Kabir Singh</h1>
+                        </div>
+                        <div class="album-wrapper">
+                            <img src="user-images/ae.jpg" alt="">
+                            <h1>Ae dil hai mushkil</h1>
+                        </div>
+                    </div>
+
+                    <!-- <div id="dots" class="glider-dots"></div> -->
+                </div>
+                <script src="glider.min.js?<?php echo time(); ?>"></script>
+                <script>
+                    new Glider(document.querySelector('.glider'),{
+                        slidesToShow: 2,
+                        draggable: true,
+                    })
+                    new Glider(document.querySelector('.glider1'),{
+                        slidesToShow: 2,
+                        draggable: true,
+                    }) 
+                    new Glider(document.querySelector('.glider2'),{
+                        slidesToShow: 2,
+                        draggable: true,
+                    }) 
+                </script>
                 <div class="tamil-container">
                     <h1>Tamil Albums</h1>
                     <div class="album-container">
-                        <button><i class="fas fa-chevron-left" onclick="prev()"></i></button>
+                        <button><i class="fas fa-chevron-left" onclick="before()"></i></button>
                             <div class="album-content" onclick="home()" id="slide1">
                                 <img src="user-images/rahman.jpg" alt="">
                                 <h1>Album name :<span>Ar Rahman Hits</span> </h1>
