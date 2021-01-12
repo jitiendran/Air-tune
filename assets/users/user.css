@@ -371,4 +371,9 @@ path{
         margin-left: -1em;
         margin-right: 1em;
     }
+    .song-wrapper{
+        margin-left: 0em;
+        width: 25em;
+        font-size: .8em;
+    }
 }
