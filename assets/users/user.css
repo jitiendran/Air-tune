@@ -173,8 +173,8 @@ main{
     width: 80%;
     height: 15em;
     padding: 1em;
+    position: relative;
     margin-bottom: 3em;
-    position: sticky;
     margin-left: 8em;
     background: rgba( 255, 255, 255, 0.85 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
@@ -277,4 +277,20 @@ path{
     font-size: 2em;
     outline: none;
     cursor: pointer;
+}
+/* Responsive design */
+@media (max-width: 400px){
+    body{
+        width: 100%;
+    }
+    .admin-title{
+        width: 49%;
+    }
+    .admin-title svg{
+        width: 4em;
+        height: 4em;
+    }
+    .admin-title h1{
+        font-size: 1.3em;
+    }
 }
